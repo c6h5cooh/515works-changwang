@@ -1,0 +1,31 @@
+#hot-news
+{
+	overflow: hidden;
+	position: relative;
+}
+#hot-news-img
+{
+	z-index: -9;
+}
+#hot-news-wp
+{
+	opacity: 0.5;
+	filter: alpha(opacity:50);
+	position: absolute;
+	bottom: 30px;
+	z-index: 0;
+	height: 640px;
+	width: 450px;
+}
+#hot-news-btn
+{
+	border: 3px solid white;
+	border-radius: 10px;
+	font-size: 1.5em;
+	padding: 10px;
+	color: white;
+}
+#view-works
+{
+	overflow: hidden;
+}

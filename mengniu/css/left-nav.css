@@ -1,0 +1,62 @@
+#left-nav
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 93px;
+	height: 100%;
+	z-index: 1000;
+}
+#left-nav-logo
+{
+	/*background: url() 100% 100% no-repeat;*/
+	width: 93px;
+	height: 50px;
+	opacity: 1;
+}
+.left-nav-seps
+{
+	width: 80%;
+	height: 1px;
+	background-color: black;
+	margin: auto;
+	
+}
+#left-nav-index
+{
+	/*background: url() 100% 100% no-repeat;*/
+	width: 93px;
+	height: 100px;
+}
+#left-nav-about-mengniu
+{
+	/*background: url() 100% 100% no-repeat;*/
+	width: 93px;
+	height: 100px;
+	opacity: 1;
+}
+#left-nav-brand-product
+{
+	/*background: url() 100% 100% no-repeat;*/
+	width: 93px;
+	height: 100px;
+}
+#left-nav-development
+{
+	/*background: url() 100% 100% no-repeat;*/
+	width: 93px;
+	height: 100px;
+	opacity: 1;
+}
+#left-nav-news
+{
+	/*background: url() 100% 100% no-repeat;*/
+	width: 93px;
+	height: 100px;
+}
+#left-nav-zhaobiao
+{
+	/*background: url() 100% 100% no-repeat;*/
+	width: 93px;
+	height: 100px;
+}

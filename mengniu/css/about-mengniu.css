@@ -1,0 +1,167 @@
+#about-mengniu-bg {
+	background-image: url(../img/about-mengniu/bg.jpg);
+	background-size: cover;
+	position: absolute;
+	z-index: -9;
+}
+
+#cow {
+	background-image: url(../img/about-mengniu/i1.png);
+	/*background-size:100% 100%;*/
+	background-position: left top;
+	background-repeat: no-repeat;
+	width: 297px;
+	height: 500px;
+	position: absolute;
+	bottom: 160px;
+	left: 93px;
+}
+
+#cow-top {
+	width: 297px;
+	height: 270px;
+}
+
+#cow-bottom {
+	width: 297px;
+	height: 230px;
+	background-color: #f39e38;
+	z-index: -1;
+	position: absolute;
+	display: flex;
+	justify-content: center;
+}
+
+#cow-bottom-div {
+	padding: 10px;
+	border-radius: 40px;
+	color: #ffffff;
+	margin: auto;
+	position: absolute;
+	bottom: 10px;
+	display: inline-block;
+	border: 2px solid white;
+	z-index: 99;
+}
+
+#gril {
+	background-image: url(../img/about-mengniu/i2.png);
+	/*background-size:100% 100%;*/
+	background-position: left top;
+	background-repeat: no-repeat;
+	width: 297px;
+	height: 500px;
+	position: absolute;
+	bottom: 160px;
+	left: 390px;
+
+}
+
+#gril-top {
+	width: 297px;
+	height: 270px;
+}
+
+#gril-bottom {
+	width: 297px;
+	height: 230px;
+	background-color: #eb6b64;
+	z-index: -1;
+	position: absolute;
+	display: flex;
+	justify-content: center;
+}
+
+#gril-bottom-div {
+	padding: 10px;
+	border-radius: 40px;
+	color: #ffffff;
+	margin: auto;
+	position: absolute;
+	bottom: 10px;
+	display: inline-block;
+	border: 2px solid white;
+	/*z-index: 99;*/
+}
+
+#gril-bottom-div:hover {
+	background-color: blue;
+}
+
+#cup {
+	background-image: url(../img/about-mengniu/i3.png);
+	/*background-size:100% 100%;*/
+	background-position: left top;
+	background-repeat: no-repeat;
+	width: 297px;
+	height: 500px;
+	position: absolute;
+	bottom: 160px;
+	left: 690px;
+}
+
+#cup-top {
+	width: 297px;
+	height: 270px;
+}
+
+#cup-bottom {
+	width: 297px;
+	height: 230px;
+	background-color: #71bde4;
+	z-index: -1;
+	position: absolute;
+	display: flex;
+	justify-content: center;
+}
+
+#cup-bottom-div {
+	padding: 10px;
+	border-radius: 40px;
+	color: #ffffff;
+	margin: auto;
+	position: absolute;
+	bottom: 10px;
+	display: inline-block;
+	border: 2px solid white;
+	z-index: 99;
+}
+
+#gress {
+	background-image: url(../img/about-mengniu/i4.png);
+	/*background-size:100% 100%;*/
+	background-position: left top;
+	background-repeat: no-repeat;
+	width: 297px;
+	height: 500px;
+	position: absolute;
+	bottom: 160px;
+	left: 990px;
+}
+
+#gress-top {
+	width: 297px;
+	height: 270px;
+}
+
+#gress-bottom {
+	width: 297px;
+	height: 230px;
+	background-color: #81c043;
+	z-index: -1;
+	position: absolute;
+	display: flex;
+	justify-content: center;
+}
+
+#gress-bottom-div {
+	padding: 10px;
+	border-radius: 40px;
+	color: #ffffff;
+	margin: auto;
+	position: absolute;
+	bottom: 10px;
+	display: inline-block;
+	border: 2px solid white;
+	z-index: 99;
+}
