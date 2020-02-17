@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Game</title>
+		<style>
+			body
+			{
+				margin: 0px;
+			}
+			.row
+			{
+				display: flex;
+				height: 10px;
+			}
+			.brick
+			{
+				width: 80px;
+				background-color: pink;
+				margin: 1px;
+			}
+			.btn
+			{
+				user-select:none;
+				padding: 10px;
+				background-color: blue;
+				color: white;
+				font-size: 1em;
+				padding: auto;
+				display: inline-block;
+			}
+		</style>
+	</head>
+	<body>
+		<img id="ball" src="https://static.hdslb.com/images/favicon.ico" style="z-index: 100;position: absolute;height: 20px;width: 20px;"/>
+		<div class="row" >
+			<div class="brick" style="background-color: chocolate;"></div>
+			<div class="brick" style="background-color: chocolate;"></div>
+			<div class="brick" style="background-color: chocolate;"></div>
+			<div class="brick" style="background-color: chocolate;"></div>
+			<div class="brick" style="background-color: chocolate;"></div>
+			<div class="brick" style="background-color: chocolate;"></div>
+			<div class="brick" style="background-color: chocolate;"></div>
+			<div class="brick" style="background-color: chocolate;"></div>
+			<div class="brick" style="background-color: chocolate;"></div>
+		</div>
+		<div class="row">
+			<div class="brick" style="background-color: chocolate;"></div>
+			<div class="brick" style="background-color: chocolate;"></div>
+			<div class="brick" style="background-color: chocolate;"></div>
+			<div class="brick" style="background-color: chocolate;"></div>
+			<div class="brick" style="background-color: chocolate;"></div>
+			<div class="brick" style="background-color: chocolate;"></div>
+			<div class="brick" style="background-color: chocolate;"></div>
+			<div class="brick" style="background-color: chocolate;"></div>
+			<div class="brick" style="background-color: chocolate;"></div>
+		</div>
+		<div class="row">
+			<div class="brick" style="background-color: chocolate;"></div>
+			<div class="brick" style="background-color: chocolate;"></div>
+			<div class="brick" style="background-color: chocolate;"></div>
+			<div class="brick" style="background-color: chocolate;"></div>
+			<div class="brick" style="background-color: chocolate;"></div>
+			<div class="brick" style="background-color: chocolate;"></div>
+			<div class="brick" style="background-color: chocolate;"></div>
+			<div class="brick" style="background-color: chocolate;"></div>
+			<div class="brick" style="background-color: chocolate;"></div>
+		</div>
+		<div class="row">
+			<div class="brick" style="background-color: chocolate;"></div>
+			<div class="brick" style="background-color: chocolate;"></div>
+			<div class="brick" style="background-color: chocolate;"></div>
+			<div class="brick" style="background-color: chocolate;"></div>
+			<div class="brick" style="background-color: chocolate;"></div>
+			<div class="brick" style="background-color: chocolate;"></div>
+			<div class="brick" style="background-color: chocolate;"></div>
+			<div class="brick" style="background-color: chocolate;"></div>
+			<div class="brick" style="background-color: chocolate;"></div>
+		</div>
+		<div class="row">
+			<div class="brick" style="background-color: chocolate;"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+		</div>
+		<div class="row">
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+		</div>
+		<div class="row">
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+		</div>
+		<div class="row">
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+		</div>
+		<div class="row">
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+		</div>
+		<div class="row">
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+		</div>
+		<div class="row">
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+		</div>
+		<div class="row">
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+		</div>
+		<div class="row">
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+		</div>
+		<div class="row">
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+		</div>
+		<div class="row">
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+		</div>
+		<div class="row">
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+		</div>
+		<div class="row">
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+		</div>
+		<div class="row">
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+		</div>
+		<div class="row">
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+		</div>
+		<div class="row">
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+		</div>
+		<div class="row">
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+		</div>
+		<div class="row">
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+		</div>
+		<div class="row">
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+		</div>
+		<div class="row">
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+		</div>
+		<div class="row">
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+		</div>
+		<div class="row">
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+		</div>
+		<div class="row">
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+		</div>
+		<div class="row">
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+		</div>
+		<div class="row">
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+		</div>
+		<div class="row">
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+		</div>
+		<div class="row">
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+		</div>
+		<div class="row">
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+		</div>
+		<div class="row">
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+		</div>
+		<div class="row">
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+		</div>
+		<div class="row">
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+		</div>
+		<div class="row">
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+		</div>
+		<div class="row">
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+		</div>
+		<div class="row">
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+		</div>
+		<div class="row">
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+		</div>
+		<div class="row"><!--鼠标、键盘 ，这一行的所有转头都有可能成为球拍-->
+			<div class="brick" id="last-row-1"></div>
+			<div class="brick" id="last-row-2"></div>
+			<div class="brick" id="last-row-3"></div>
+			<div class="brick" id="last-row-4"></div>
+			<div class="brick" id="last-row-5"></div>
+			<div class="brick" id="last-row-6"></div>
+			<div class="brick" id="last-row-7"></div>
+			<div class="brick" id="last-row-8"></div>
+			<div class="brick" id="last-row-9"></div>
+		</div>
+		
+		<section onmouseenter="startGame()" onmouseleave="stopGame()" style="height: 200px;width:20vw;background-color:pink;margin: 5px;">
+			<p>鼠标放在这继续游戏</p>
+			<div class="btn" onclick="racketBecomeLeftOne()">向左</div>
+			<div class="btn" onclick="racketBecomeRightOne()">向右</div>
+		</section>
+		
+		<section>
+			<style>
+				#l1,#l2,#l3
+				{
+					display: inline-block;
+				}
+			</style>
+			<p>级别</p>
+			<div id="l1" onclick="speed=1;document.getElementById('l1').style.backgroundColor='pink';document.getElementById('l2').style.backgroundColor='azure';document.getElementById('l3').style.backgroundColor='azure';" style="background-color: pink;">入门</div>
+			<div id="l2"  onclick="speed=2;document.getElementById('l1').style.backgroundColor='azure';document.getElementById('l2').style.backgroundColor='pink';document.getElementById('l3').style.backgroundColor='azure';">普通</div>
+			<div id="l3"  onclick="speed=3;document.getElementById('l1').style.backgroundColor='azure';document.getElementById('l2').style.backgroundColor='azure';document.getElementById('l3').style.backgroundColor='pink';">炼狱</div>
+		</section>
+		
+		<p>坚持时间：<span id="time"></span></p>
+		<p>失败次数<span id="lost">0</span></p>
+		<p>打破了<span id="score">0</span>个转头</p>
+	</body>
+	<script src="action.js"></script>
+</html>
