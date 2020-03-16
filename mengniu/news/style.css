@@ -1,0 +1,69 @@
+body
+{
+	margin: 0px; 
+	overflow-x: hidden;
+}
+
+drop-one,drop-two
+{
+	display: block;
+	position: absolute;
+}
+drop-one
+{
+	
+}
+drop-two
+{
+	
+}
+
+background
+{
+	display: block;
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+}
+background top,	background bottom
+{
+	display: block;
+	width: 100vw;
+	height: 50vh;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% 100%;
+}
+background top
+{
+	background-image: url(http://img.mengniu.com.cn/Uploads/Mn/Picture/2018/12/03/s5c04d048c2325.jpg);
+}
+background bottom
+{
+	background-image: url(http://img.mengniu.com.cn/Uploads/Mn/Picture/2018/12/24/s5c20b40a51f1c.png);
+}
+
+background top div
+{
+	 background-image: url(http://img.mengniu.com.cn/Uploads/Mn/Picture/2018/12/03/s5c04d05f6b783.png);
+	 background-repeat: no-repeat;
+	 background-position: right top;
+	 position: absolute;
+	 top: 20vh;
+	 right: 10vw; 
+	 height: 61px;
+	 width: 217px;
+}
+background bottom div
+{
+	 background-image: url(http://img.mengniu.com.cn/Uploads/Mn/Picture/2018/11/12/s5be8fed281a77.png);
+	 background-repeat: no-repeat;
+	 background-position: left bottom;
+	 position: absolute;
+	 bottom: 20vh;
+	 left: 10vw; 
+	 height: 61px;
+	 width: 235px;
+}

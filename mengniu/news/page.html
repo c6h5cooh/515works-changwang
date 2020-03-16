@@ -3,11 +3,6 @@
 	<head>
 		<meta charset="utf-8">
 		<title>新闻与活动</title>
-		<script>
-			window.currentPageIndex = 5;
-			window.currentPageName="news";
-			window.currentPageNumber=5;
-		</script>
 		<script src="../public/movement.js" type="text/javascript"></script>
 		<link href="https://cdn-1251928468.cos.ap-beijing.myqcloud.com/last-bar.css" rel="stylesheet" />
 		<link href="img/logo.ico" type="image/x-icon" rel="shortcut icon" />
@@ -15,8 +10,9 @@
 		<!--extend-column资源-->
 		<link href="../public/extend-column.css" rel="stylesheet"/>
 		<link href="../public/left-nav.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="style.css">
 	</head>
-	<body style="margin: 0px; overflow-x: hidden;">
+	<body>
 		<left-nav>
 			<logo></logo>
 			<btn-item id="btn-item-1"></btn-item>
@@ -29,76 +25,10 @@
 			</mouse-extend-region>
 			<btn-item id="btn-item-6"></btn-item>
 		</left-nav>
-		
-		<style>
-			drop-one,drop-two
-			{
-				display: block;
-				position: absolute;
-			}
-			drop-one
-			{
-				
-			}
-			drop-two
-			{
-				
-			}
-		</style>
+
 		<drop-one></drop-one>
 		<drop-two></drop-two>
 		
-		<style>
-			background
-			{
-				display: block;
-				height: 100vh;
-				width: 100vw;
-				display: flex;
-				flex-direction: column;
-				flex: 1;
-			}
-			background top,	background bottom
-			{
-				display: block;
-				width: 100vw;
-				height: 50vh;
-				background-repeat: no-repeat;
-				background-position: center;
-				background-size: 100% 100%;
-			}
-			background top
-			{
-				background-image: url(http://img.mengniu.com.cn/Uploads/Mn/Picture/2018/12/03/s5c04d048c2325.jpg);
-			}
-			background bottom
-			{
-				background-image: url(http://img.mengniu.com.cn/Uploads/Mn/Picture/2018/12/24/s5c20b40a51f1c.png);
-			}
-			
-			background top div
-			{
-				 background-image: url(http://img.mengniu.com.cn/Uploads/Mn/Picture/2018/12/03/s5c04d05f6b783.png);
-				 background-repeat: no-repeat;
-				 background-position: right top;
-				 position: absolute;
-				 top: 20vh;
-				 right: 10vw; 
-				 height: 61px;
-				 width: 217px;
-			}
-			background bottom div
-			{
-				 background-image: url(http://img.mengniu.com.cn/Uploads/Mn/Picture/2018/11/12/s5be8fed281a77.png);
-				 background-repeat: no-repeat;
-				 background-position: left bottom;
-				 position: absolute;
-				 bottom: 20vh;
-				 left: 10vw; 
-				 height: 61px;
-				 width: 235px;
-			}
-		</style>
 		<background>
 			<top>
 				<div></div>
@@ -107,90 +37,6 @@
 				<div></div>
 			</bottom>
 		</background>	
-		
-		<script>
-			function set_bgs(obj,size)
-			{
-				obj.style.backgroundSize=`${size}% ${size}%`;
-			}
-			var top_timer=null;
-			var top_size=100;
-			document.getElementsByTagName("top")[0].onmouseenter=function()
-			{
-				
-				clearInterval(top_timer);
-				top_timer=setInterval
-				(
-					function()
-					{
-						if(top_size>=105)
-						{
-							clearInterval(top_timer);
-						}
-						set_bgs(document.getElementsByTagName("top")[0],top_size);
-						top_size+=0.07;
-					},
-					1
-				)	
-			}
-			document.getElementsByTagName("top")[0].onmouseleave=function()
-			{
-				
-				clearInterval(top_timer);
-				top_timer=setInterval
-				(
-					function()
-					{
-						if(top_size<=100)
-						{
-							clearInterval(top_timer);
-						}
-						set_bgs(document.getElementsByTagName("top")[0],top_size);
-						top_size-=0.07;
-					},
-					1
-				)	
-			}
-			/************************************************/
-			var bottom_timer=null;
-			var bottom_size=100;
-			document.getElementsByTagName("bottom")[0].onmouseenter=function()
-			{
-				
-				clearInterval(bottom_timer);
-				bottom_timer=setInterval
-				(
-					function()
-					{
-						if(bottom_size>=105)
-						{
-							clearInterval(bottom_timer);
-						}
-						set_bgs(document.getElementsByTagName("bottom")[0],bottom_size);
-						bottom_size+=0.07;
-					},
-					1
-				)	
-			}
-			document.getElementsByTagName("bottom")[0].onmouseleave=function()
-			{
-				
-				clearInterval(bottom_timer);
-				bottom_timer=setInterval
-				(
-					function()
-					{
-						if(bottom_size<=101)
-						{
-							clearInterval(bottom_timer);
-						}
-						set_bgs(document.getElementsByTagName("bottom")[0],bottom_size);
-						bottom_size-=0.07;
-					},
-					1
-				)	
-			}
-		</script>
 		
 		<last-bar style="display: block;position: absolute;">
 			<social-network>
@@ -235,4 +81,5 @@
 	</body>
 	<script src="https://cdn-1251928468.cos.ap-beijing.myqcloud.com/last-bar.js"></script>
 	<script src="../public/left-nav.js"></script>
+	<script src="script.js"></script>
 </html>

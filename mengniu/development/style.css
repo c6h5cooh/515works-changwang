@@ -1,0 +1,62 @@
+body
+{
+	 margin: 0px; 
+	 overflow-x: hidden;
+}
+
+background
+{
+	width: 100vw;
+	height: 100vh;
+	display: block;
+	display: flex;flex: 1;
+}
+column-one,column-two,column-three,column-four
+{
+	display: inline-block;
+	height: 100vh;
+	position: absolute;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+background drop
+{
+	display: inline-block;
+	width: 354px;
+	height: 502px;
+	position: absolute;
+	right: -177px;
+	bottom: 0px;
+}
+column-one
+{
+	background-image: url(http://img.mengniu.com.cn/Uploads/Mn/Picture/2018/12/24/s5c20af78ed4bb.jpg);
+}
+column-two
+{
+	background-image: url(http://img.mengniu.com.cn/Uploads/Mn/Picture/2018/11/13/s5bea48d11ebaa.jpg);
+}
+column-three
+{
+	background-image: url(http://img.mengniu.com.cn/Uploads/Mn/Picture/2018/11/29/s5bff93fdde7de.jpg);
+}
+column-four
+{
+	background-image: url(http://img.mengniu.com.cn/Uploads/Mn/Picture/2018/11/13/s5bea487ce4c5b.jpg);
+}
+column-two drop
+{
+	background-image: url(http://img.mengniu.com.cn/Uploads/Mn/Picture/2018/12/03/s5c04d7ea25493.png);
+}
+column-one drop
+{
+	background-image: url(http://img.mengniu.com.cn/Uploads/Mn/Picture/2018/12/24/s5c20af7e148eb.png);
+}
+column-three drop
+{
+	background-image: url(http://img.mengniu.com.cn/Uploads/Mn/Picture/2018/11/29/s5bff9405ba23d.png);
+}
+column-four drop
+{
+	background-image: url(http://img.mengniu.com.cn/Uploads/Mn/Picture/2018/11/13/s5bea4bb8a32eb.jpg);
+}
