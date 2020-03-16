@@ -1,0 +1,271 @@
+window.colors=
+{
+	'index':'#2A9B38',
+	'about':'#F4AF5E',
+	'brand':'#EE8781',
+	'development':'#8CC8E7',
+	'news':'#50B25F',
+	'zhaobiao':'#F4B96A'
+};
+document.getElementsByTagName('btn-item')[1]['extend_column_item_bgc']='#CEAD76';
+document.getElementsByTagName('btn-item')[2]['extend_column_item_bgc']='#C99094';
+document.getElementsByTagName('btn-item')[3]['extend_column_item_bgc']='#8ECCEB';
+document.getElementsByTagName('btn-item')[4]['extend_column_item_bgc']='#67BE7F';
+window.extendcolumntext=
+{
+	'about':
+	[
+		'企业介绍',
+		'企业文化',
+		'企业荣誉',
+		'联系我们'
+	],
+	'brand':
+	[
+		'所有产品',
+		'购买产品'
+	],
+	'development':
+	[
+		'有你最美',
+		'成长共赢',
+		'绿色发展',
+		'报告下载'
+	],
+	'news':
+	[
+		'热点新闻',
+		'工厂参观'
+	]
+};
+function open_window_by_link_text(Text)
+{
+	if(Text=="企业介绍")
+	{
+		window.open('../about/company-introduction.html');
+	}
+	if(Text=="企业文化")
+	{
+		window.open('../about/company-culture.html');
+	}
+	if(Text=="企业荣耀")
+	{
+		window.open('../about/company-honor.html');
+	}
+	if(Text=="练习我们")
+	{
+		window.open('../about/contact-us.html');
+	}
+	if(Text=="所有产品")
+	{
+		window.open('../brand/all-production.html');
+	}
+	if(Text=="购买产品")
+	{
+		window.open('../brand/buy-production.html');
+	}
+	if(Text=="有你最美")
+	{
+		window.open('../development/best-with-you.html');
+	}
+	if(Text=="成长共赢")
+	{
+		window.open('../development/win-win-growth.html');
+	}
+	if(Text=="绿色发展")
+	{
+		window.open('../development/green-development.html');
+	}
+	if(Text=="报告下载")
+	{
+		window.open('../development/download-report.html');
+	}
+	if(Text=="热点新闻")
+	{
+		window.open('../news/hot-news.html');
+	}
+	if(Text=="工厂参观")
+	{
+		window.open('../news/visit-works.html');
+	}
+}
+
+
+//给每一个btn-item设定名字
+document.getElementsByTagName('btn-item')[0]['pagename']='index';
+document.getElementsByTagName('btn-item')[1]['pagename']='about';
+document.getElementsByTagName('btn-item')[2]['pagename']='brand';
+document.getElementsByTagName('btn-item')[3]['pagename']='development';
+document.getElementsByTagName('btn-item')[4]['pagename']='news';
+document.getElementsByTagName('btn-item')[5]['pagename']='zhaobiao';
+
+//设置按钮打开链接
+document.getElementsByTagName('btn-item')[0].onclick=function(){window.open('../index/index.html');}
+document.getElementsByTagName('btn-item')[1].onclick=function(){window.open('../about/page.html');}
+document.getElementsByTagName('btn-item')[2].onclick=function(){window.open('../brand/page.html');}
+document.getElementsByTagName('btn-item')[3].onclick=function(){window.open('../development/page.html');}
+document.getElementsByTagName('btn-item')[4].onclick=function(){window.open('../news/page.html');}
+document.getElementsByTagName('btn-item')[5].onclick=function(){window.open('../zhaobiao/page.html');}
+
+document.getElementsByTagName('btn-item')[window.currentPageNumber-1].style.backgroundImage=`url(../public/btns/active-${window.currentPageName}.png)`;
+document.getElementsByTagName('btn-item')[window.currentPageNumber-1].style.opacity=1;
+document.getElementsByTagName('logo')[0].style.backgroundColor = window.colors[window.currentPageName];
+document.getElementsByTagName('logo')[0].onclick=function(){location.href="#";}
+
+//logo 颜色
+for(var i=0;i<6;i++)
+{
+	document.getElementsByTagName('btn-item')[i].onmouseenter=function()
+	{
+		document.getElementsByTagName("logo")[0].style.backgroundColor=window.colors[this.pagename];
+	}
+}
+// document.getElementsByTagName("left-nav")[0].style.backgroundColor = window.colors[window.currentPageName];
+
+//控制是否弹出
+//进入mouse-extend-region时弹出/收回框架
+window.extendcolumnmovementok=true;
+document.getElementsByTagName("mouse-extend-region")[0].onmouseenter=function()
+{
+	if(window.extendcolumnmovementok)
+	{
+		window.extendcolumnmovementok=false;
+		movement(document.getElementsByTagName("extend-column")[0], 'width', 93,
+			function()
+			{
+				window.extendcolumnmovementok=true;
+			},'extendcolumn')
+	}
+}
+document.getElementsByTagName("mouse-extend-region")[0].onmouseleave=function()
+{
+	if(window.extendcolumnmovementok)
+	{
+		window.extendcolumnmovementok=false;
+		movement(document.getElementsByTagName("extend-column")[0], 'width', 0,
+			function()
+			{
+				window.extendcolumnmovementok=true;
+			},'extendcolumn')
+	}
+}
+document.getElementsByTagName('btn-item')[1].onmouseenter=function()
+{
+	//设置extend-column上边距
+	document.getElementsByTagName("extend-column")[0].style.paddingTop=this.offsetTop+"px";
+	//设置extend-column背景色
+	document.getElementsByTagName("extend-column")[0].style.backgroundColor=window.colors[this.pagename];
+	//加链接文字，首先清空
+	window.btnitemtext=``;
+	for(var i=0;i<window.extendcolumntext[this.pagename].length;i++)
+	{
+		window.btnitemtext+=`<extend-column-item>${window.extendcolumntext[this.pagename][i]}</extend-column-item>`;
+	}
+	document.getElementsByTagName("extend-column")[0].innerHTML=window.btnitemtext;
+	//设置extend-column-item背景色
+	for(var j=0;j<document.getElementsByTagName('extend-column-item').length;j++)
+	{
+		document.getElementsByTagName('extend-column-item')[j].onmouseenter=function()
+		{
+			this.style.backgroundColor=document.getElementsByTagName('btn-item')[1].extend_column_item_bgc;
+		}
+		document.getElementsByTagName('extend-column-item')[j].onmouseleave=function()
+		{
+			this.style.backgroundColor=window.colors[document.getElementsByTagName('btn-item')[1].pagename];
+		}
+		document.getElementsByTagName('extend-column-item')[j].onclick=function()
+		{
+			open_window_by_link_text(this.innerText);
+		}
+	}
+}
+document.getElementsByTagName('btn-item')[2].onmouseenter=function()
+{
+	//设置extend-column上边距
+	document.getElementsByTagName("extend-column")[0].style.paddingTop=this.offsetTop+"px";
+	//设置extend-column背景色
+	document.getElementsByTagName("extend-column")[0].style.backgroundColor=window.colors[this.pagename];
+	//加链接文字，首先清空
+	window.btnitemtext=``;
+	for(var i=0;i<window.extendcolumntext[this.pagename].length;i++)
+	{
+		window.btnitemtext+=`<extend-column-item>${window.extendcolumntext[this.pagename][i]}</extend-column-item>`;
+	}
+	document.getElementsByTagName("extend-column")[0].innerHTML=window.btnitemtext;
+	//设置extend-column-item背景色
+	for(var j=0;j<document.getElementsByTagName('extend-column-item').length;j++)
+	{
+		document.getElementsByTagName('extend-column-item')[j].onmouseenter=function()
+		{
+			this.style.backgroundColor=document.getElementsByTagName('btn-item')[2].extend_column_item_bgc;
+		}
+		document.getElementsByTagName('extend-column-item')[j].onmouseleave=function()
+		{
+			this.style.backgroundColor=window.colors[document.getElementsByTagName('btn-item')[2].pagename];
+		}
+		document.getElementsByTagName('extend-column-item')[j].onclick=function()
+		{
+			open_window_by_link_text(this.innerText);
+		}
+	}
+}
+document.getElementsByTagName('btn-item')[3].onmouseenter=function()
+{
+	//设置extend-column上边距
+	document.getElementsByTagName("extend-column")[0].style.paddingTop=this.offsetTop+"px";
+	//设置extend-column背景色
+	document.getElementsByTagName("extend-column")[0].style.backgroundColor=window.colors[this.pagename];
+	//加链接文字，首先清空
+	window.btnitemtext=``;
+	for(var i=0;i<window.extendcolumntext[this.pagename].length;i++)
+	{
+		window.btnitemtext+=`<extend-column-item>${window.extendcolumntext[this.pagename][i]}</extend-column-item>`;
+	}
+	document.getElementsByTagName("extend-column")[0].innerHTML=window.btnitemtext;
+	//设置extend-column-item背景色
+	for(var j=0;j<document.getElementsByTagName('extend-column-item').length;j++)
+	{
+		document.getElementsByTagName('extend-column-item')[j].onmouseenter=function()
+		{
+			this.style.backgroundColor=document.getElementsByTagName('btn-item')[3].extend_column_item_bgc;
+		}
+		document.getElementsByTagName('extend-column-item')[j].onmouseleave=function()
+		{
+			this.style.backgroundColor=window.colors[document.getElementsByTagName('btn-item')[3].pagename];
+		}
+		document.getElementsByTagName('extend-column-item')[j].onclick=function()
+		{
+			open_window_by_link_text(this.innerText);
+		}
+	}
+}
+document.getElementsByTagName('btn-item')[4].onmouseenter=function()
+{
+	//设置extend-column上边距
+	document.getElementsByTagName("extend-column")[0].style.paddingTop=this.offsetTop+"px";
+	//设置extend-column背景色
+	document.getElementsByTagName("extend-column")[0].style.backgroundColor=window.colors[this.pagename];
+	//加链接文字，首先清空
+	window.btnitemtext=``;
+	for(var i=0;i<window.extendcolumntext[this.pagename].length;i++)
+	{
+		window.btnitemtext+=`<extend-column-item>${window.extendcolumntext[this.pagename][i]}</extend-column-item>`;
+	}
+	document.getElementsByTagName("extend-column")[0].innerHTML=window.btnitemtext;
+	//设置extend-column-item背景色
+	for(var j=0;j<document.getElementsByTagName('extend-column-item').length;j++)
+	{
+		document.getElementsByTagName('extend-column-item')[j].onmouseenter=function()
+		{
+			this.style.backgroundColor=document.getElementsByTagName('btn-item')[4].extend_column_item_bgc;
+		}
+		document.getElementsByTagName('extend-column-item')[j].onmouseleave=function()
+		{
+			this.style.backgroundColor=window.colors[document.getElementsByTagName('btn-item')[4].pagename];
+		}
+		document.getElementsByTagName('extend-column-item')[j].onclick=function()
+		{
+			open_window_by_link_text(this.innerText);
+		}
+	}
+}

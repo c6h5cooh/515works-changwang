@@ -1,0 +1,119 @@
+last-bar {
+	display: none;
+	position: fixed;
+	bottom: 0px;
+	background-color: black;
+	/* opacity: 0.8; */
+	filter: alpha(opacity:50);
+	z-index: 333;
+	color: white;
+	padding: 50px 0px;
+	font-weight: 200;
+	font-size: 0.8em;
+	height: 380px;
+	background-image: url(http://img.mengniu.com.cn/Uploads/Mn/Picture/2018/11/28/s5bfe0b44eefb4.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+last-bar>social-network {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+last-bar>social-network>left {
+	width: 50vw;
+	display: flex;
+	justify-content: flex-end;
+	padding-right: 10px;
+}
+
+last-bar>social-network>left>div {
+	text-align: center;
+	cursor: pointer;
+}
+last-bar>social-network>left>div:hover {
+	opacity: 1;
+	filter: alpha(opacity:100);
+}
+last-bar>social-network>right {
+	width: 50vw;
+	display: flex;
+	justify-content: flex-start;
+	padding-left: 10px;
+	align-items: center;
+}
+
+last-bar>social-network>right>div {
+	text-align: center;
+	cursor: pointer;
+}
+
+qrcode {
+	/* display: inline-block; */
+	vertical-align: middle;
+	/* height: 155px; */
+	/* width: 135px; */
+	/* background-size: 100% 100%; */
+	margin-left: 10px;
+	border-radius: 5px;
+	
+	display: inline-block;
+	width: 129px;
+	height: 149px;
+	background-position: center center;
+	background-size: 0% 0%;
+	background-repeat: no-repeat;
+	background-image: url(https://cdn-1251928468.cos.ap-beijing.myqcloud.com/qrcode.png);
+}
+
+last-bar>mengniu-link {
+	display: flex;
+	justify-content: center;
+	margin: 30px 0px 10px 0px;
+	width: 100vw;
+	color: white;
+
+}
+
+last-bar>mengniu-link>a {
+	color: white;
+	text-decoration: none;
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+link-sep {
+	display: inline-block;
+	margin: auto 5px;
+	padding: 0px;
+	width: 1px;
+	background-color: white;
+	height: 1em;
+}
+
+mengniu-corp {
+	text-align: center;
+	margin: 0px 0px 10px 30px;
+	width: 100vw;
+	color: white;
+	display: block;
+}
+
+mengniu-corp a {
+	color: white;
+	text-decoration: none;
+}
+
+mengniu-corp p {
+	margin: 10px 0px 0px 0px;
+}
+
+mengniu-corp>a>img {
+	vertical-align: bottom;
+}
+qrcode
+{
+	
+}

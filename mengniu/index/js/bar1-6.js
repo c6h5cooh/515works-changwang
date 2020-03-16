@@ -1,0 +1,12 @@
+document.getElementById("bar1").style.width = window.innerWidth + "px";
+document.getElementById("bar1").style.height = window.innerHeight + "px";
+document.getElementById("bar2").style.width = window.innerWidth + "px";
+document.getElementById("bar2").style.height = window.innerHeight + "px";
+document.getElementById("bar3").style.width = window.innerWidth + "px";
+document.getElementById("bar3").style.height = window.innerHeight + "px";
+document.getElementById("bar4").style.width = window.innerWidth + "px";
+document.getElementById("bar4").style.height = window.innerHeight + "px";
+document.getElementById("bar5").style.width = window.innerWidth + "px";
+document.getElementById("bar5").style.height = window.innerHeight + "px";
+document.getElementById("bar6").style.width = window.innerWidth + "px";
+document.getElementById("bar6").style.height = window.innerHeight + "px";

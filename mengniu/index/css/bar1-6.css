@@ -1,0 +1,36 @@
+#bar1
+{
+	background-image: url(../img/bg1.png) ;
+	background-size: 100% 100%;
+	position: relative;
+}
+#bar2
+{
+	background-image: url(../img/bg2.jpg) ;
+	background-size: 100% 100%;
+	position: relative;
+}
+#bar3
+{
+	background-image: url(../img/bg3.jpg) ;
+	background-size: 100% 100%;
+	position: relative;
+}
+#bar4
+{
+	background-image: url(../img/bg4.png) ;
+	background-size: 100% 100%;
+	position: relative;
+}
+#bar5
+{
+	background-image: url(../img/bg5.jpg) ;
+	background-size: 100% 100%;
+	position: relative;
+}
+#bar6
+{
+	background-image: url(../img/bg6.png) ;
+	background-size: 100% 100%;
+	position: relative;
+}

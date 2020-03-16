@@ -1,0 +1,10 @@
+.expend-bars
+{
+	position: fixed;
+	left:93px;
+	height: 100%;
+	background-color: aqua;
+	transition: 0.5s;
+	overflow: hidden;
+	top: 0px;
+}

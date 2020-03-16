@@ -1,0 +1,21 @@
+#six-points {
+	position: fixed;
+	bottom: 20px;
+	/*left:0px;*/
+	right: 0px;
+	opacity: 0.8;
+	width: 600px;
+	height: 100px;
+	display: flex;
+	justify-content: space-around;
+	z-index: 1000;
+}
+
+#six-points div 
+{
+	background-repeat: no-repeat;
+	background-image: url(../img/3e.png);
+
+	width: 22px;
+	height: 29px;
+}
