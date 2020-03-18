@@ -1,3 +1,8 @@
+window.currentPageIndex = 6;
+window.currentPageName="zhaobiao";
+window.currentPageNumber=6;
+
+
 function set_arrow(direction,type)
 {
 	if(direction==="left")
